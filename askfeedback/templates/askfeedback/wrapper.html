@@ -1,0 +1,36 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Ask Feedback</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'askfeedback/css/bootstrap.min.css' %}" type="text/css">
+		<style>
+			body {
+				background-color: #F0FFFF;
+			}
+			legend {
+				font-family: Helvetica;
+			}
+			p {
+				font-family: Helvetica;
+			}
+			#email {
+				font-family: Helvetica;
+			}
+			textarea {
+				font-family: Helvetica;
+				resize: none;
+			}
+		</style>
+	</head>
+
+	<body>
+    {% block content %}
+    {% endblock %}
+	</body>
+
+</html>

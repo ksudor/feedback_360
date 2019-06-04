@@ -1,0 +1,20 @@
+{% extends "leavefeedback/wrapper.html" %}
+
+{% block content %}
+
+<div class="container">
+  <form role="form">
+    <div class="form-group">
+      <fieldset class="border p-2">
+        <legend class="w-auto">Leave Feedback</legend>
+        <p><b>'Requester Email'</b></p>
+        <p>My Email: <br> {{form.email}}</p>
+        <p>What was good: <br> {{form.good}}</p>
+        <p>Things to improve: <br> {{form.improve}}</p>
+        <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+      </fieldset>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
