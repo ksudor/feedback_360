@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('askfeedback_v1', '0001_initial'),
+        ('askfeedback', '0001_initial'),
     ]
 
     operations = [
