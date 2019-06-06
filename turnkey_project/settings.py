@@ -33,9 +33,37 @@ with open('/var/lib/django/allowed_hosts', 'r') as fob:
     # Read allowed_hosts dynamically for reliable inithooks host setting
     ALLOWED_HOSTS = [line.rstrip() for line in fob]
 
-EMAIL_HOST = "localhost"
-EMAIL_PORT = "25"
-DEFAULT_FROM_EMAIL = "noreply@example.com"
+#For email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_TLS = False
+
+
+
+#Webmail адресhttps://webmail.adm.tools/
+#Имя пользователяfedback360@998899.xyz
+#Пароль:	69bOI7yfa0YV
+#POP3/IMAP сервер:	mail.adm.tools
+#POP3 порт:	110 или 995 (POP3+SSL)
+#IMAP порт:	143 или 993 (IMAP4+SSL)
+#SMTP сервер:	mail.adm.tools
+#SMTP порт:	25 или 2525 или 465 (SMTP+SSL)
+
+EMAIL_HOST = 'mail.adm.tools'
+
+EMAIL_HOST_USER = 'feedback360@998899.xyz'
+
+#Must generate specific password for your app in [gmail settings][1]
+EMAIL_HOST_PASSWORD = '69bOI7yfa0YV'
+
+EMAIL_PORT = 25
+
+#This did the trick
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+#EMAIL_HOST = "localhost"
+#EMAIL_PORT = "25"
+#DEFAULT_FROM_EMAIL = "noreply@example.com"
 
 
 

@@ -11,20 +11,7 @@
         <p>My Email: <br> {{form.email}}</p>
         <p>Reviewer Emails: <br> {{form.emails}}</p>
         <p>Deadline Date: <br> {{form.deadline}}</p>
-<!--
-       <p>Deadline Date: <br> <input type="date" name="date" id="date" min=0></p>
-        <script>
-          var date = new Date();
-          var day = date.getDate();
-          var month = date.getMonth() + 1;
-          var year = date.getFullYear();
-          if (month < 10) month = "0" + month;
-          if (day < 10) day = "0" + day;
-          var today = year + "-" + month + "-" + day;
-          document.getElementById("date").value = today;
-          document.getElementById("date").setAttribute("min", today);
-        </script>
--->
+        <h6>{{ form.errors.emails }}  {{ form.errors.deadline }}</h6>
         <p><input type="submit" class="btn btn-primary" value="Submit"></p>
       </fieldset>
     </div>
